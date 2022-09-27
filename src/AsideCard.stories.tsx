@@ -8,6 +8,7 @@ export default {
     channelName: { defaultValue: 'Default Name' },
     gameTitle: { defaultValue: 'Default Title' },
     viewerCount: { defaultValue: 2958 },
+    streamName: { defaultValue: 'Default Stream Title' },
     imgSrc: {
       defaultValue:
         'https://cdn.pixabay.com/photo/2022/08/26/13/15/man-7412527_960_720.png',
