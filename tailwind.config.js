@@ -39,7 +39,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      display: ['group-hover'],
+      display: ['group-hover', 'group-focus'],
     },
   },
   plugins: [],
