@@ -1,12 +1,7 @@
-import React from "react"
-import { Page } from "./Page"
+import React from 'react';
 
 const App: React.FC<{}> = () => {
-  return (
-    <>
-      <Page title="A simple React Template" />
-    </>
-  )
-}
+  return <>hellowow</>;
+};
 
-export default App
+export default App;

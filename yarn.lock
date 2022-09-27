@@ -14290,6 +14290,11 @@
   "resolved" "https://registry.npmjs.org/store2/-/store2-2.12.0.tgz"
   "version" "2.12.0"
 
+"storybook-addon-state@^1.0.3":
+  "integrity" "sha512-0lpedSYu2xIlq4QK/8YH4Cuj6vt2p8iRCcJBb4JFxyLZ6RAMHFFkf072BKl4WrU1LfLq3/7SD4snvxRoTjvsvw=="
+  "resolved" "https://registry.npmjs.org/storybook-addon-state/-/storybook-addon-state-1.0.3.tgz"
+  "version" "1.0.3"
+
 "storybook@^6.1.14":
   "integrity" "sha512-Z8B7fYFm7VYhG9Vraj8gb1gwJmsMc15KDC2Tz9mZjxkwc6B//3wKN0ksBXyddZv1kTEnq1LExRWNiQfMR2wYQw=="
   "resolved" "https://registry.npmjs.org/storybook/-/storybook-6.1.14.tgz"

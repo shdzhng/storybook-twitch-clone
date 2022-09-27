@@ -1,4 +1,4 @@
-import { AsideCard, AsideCardProps } from './AsideCard';
+import { AsideCard, AsideCardProps } from '../components/AsideCard';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 export default {
@@ -9,6 +9,9 @@ export default {
     gameTitle: { defaultValue: 'Default Title' },
     viewerCount: { defaultValue: 2958 },
     streamName: { defaultValue: 'Default Stream Title' },
+    steamURL: {
+      defaultValue: 'https://shdzhng.dev',
+    },
     imgSrc: {
       defaultValue:
         'https://cdn.pixabay.com/photo/2022/08/26/13/15/man-7412527_960_720.png',
