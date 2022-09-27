@@ -22,8 +22,8 @@ export const AsideCard: React.FC<AsideCardProps> = ({
 
   return (
     <div className="w-60 bg-g2 px-4 py-2  hover:bg-g1 relative cursor-pointer">
-      <div className="flex justify-between group">
-        <div className="flex  m-h-6">
+      <div className="flex justify-between group max-h-8">
+        <div className="flex  max-h-8">
           <img
             className="w-8 rounded-3xl"
             src={imgSrc}
@@ -36,8 +36,8 @@ export const AsideCard: React.FC<AsideCardProps> = ({
             <p className="text-xs text-g3  whitespace-nowrap overflow-hidden truncate w-36 ">
               {gameTitle}
             </p>
-            <div className="absolute opacity-0 group-hover:opacity-100 -right-40 top-0 bg-w  w-36 rounded-lg shadow-xl transition-opacity ease-in-out delay-200 duration-300 max-h-12  whitespace-pre-wrap overflow-ellipsis hover:opacity-0">
-              <p className="text-xs p-2 h-fill truncate overflow-hidden ">
+            <div className="absolute opacity-0 group-hover:opacity-100 -right-40 top-0 bg-w  w-36 rounded-lg shadow-xl transition-opacity ease-in-out delay-200 duration-300 overflow-hidden hover:opacity-0">
+              <p className="text-xs p-2 max-h-12 leading-5 clamp">
                 {streamName}
               </p>
             </div>

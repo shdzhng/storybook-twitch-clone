@@ -4,16 +4,16 @@ console.log(`   ✅ purgeEnabled=${purgeEnabled}\n`);
 
 module.exports = {
   mode: 'jit',
+  content: [
+    './src/**/*.html',
+    './src/**/*.tsx',
+    './src/**/*.jsx',
+    './public/**/*.html',
+  ],
+  darkMode: false,
   purge: {
     enabled: purgeEnabled,
-    content: [
-      './src/**/*.html',
-      './src/**/*.tsx',
-      './src/**/*.jsx',
-      './public/**/*.html',
-    ],
   },
-  darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
       transparent: 'transparent',

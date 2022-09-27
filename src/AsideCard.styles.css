@@ -1,7 +1,7 @@
-.hover-trigger .hover-target {
-    display: none;
-}
 
-.hover-trigger:hover .hover-target {
-    display: block;
+.clamp{
+    display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

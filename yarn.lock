@@ -2539,6 +2539,11 @@
   dependencies:
     "defer-to-connect" "^1.0.1"
 
+"@tailwindcss/line-clamp@^0.4.2":
+  "integrity" "sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/line-clamp/-/line-clamp-0.4.2.tgz"
+  "version" "0.4.2"
+
 "@testing-library/dom@^7.28.1":
   "integrity" "sha512-CtrJRiSYEfbtNGtEsd78mk1n1v2TUbeABlNIcOCJdDfkN5/JTOwQEbbQpoSRxGqzcWPgStMvJ4mNolSuBRv1NA=="
   "resolved" "https://registry.npmjs.org/@testing-library/dom/-/dom-7.29.4.tgz"
@@ -14643,7 +14648,7 @@
     "slice-ansi" "^4.0.0"
     "string-width" "^4.2.0"
 
-"tailwindcss@^2.0.2":
+"tailwindcss@^2.0.2", "tailwindcss@>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1":
   "integrity" "sha512-nO9JRE1pO7SF9RnYAl6g7uzeHdrmKAFqNjT9NtZUfxqimJZAOOLOEyIEUiMq12+xIc7mC2Ey3Vf90XjHpWKfbw=="
   "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-2.0.2.tgz"
   "version" "2.0.2"
