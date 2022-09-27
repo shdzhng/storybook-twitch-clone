@@ -12,17 +12,19 @@ export interface AsideCardProps {
 }
 
 export const AsideCard: React.FC<AsideCardProps> = ({
-  channelName = 'Default Name',
-  gameTitle = 'Default Title',
-  streamName = 'Default Stream Name',
-  streamURL = 'http://shdzhng.dev',
-  imgSrc = 'https://cdn.pixabay.com/photo/2022/08/26/13/15/man-7412527_960_720.png',
-  viewerCount = 2000,
-  shrunk = false,
+  channelName,
+  gameTitle,
+  streamName,
+  streamURL,
+  imgSrc,
+  viewerCount,
+  shrunk,
 }) => {
   const formatViewCount = (count: number): string => {
     return (count / 1000).toFixed(1) + 'k';
   };
+
+  console.log(shrunk);
 
   return (
     <div
