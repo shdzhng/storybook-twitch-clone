@@ -22,22 +22,22 @@ export const AsideCard: React.FC<AsideCardProps> = ({
 
   return (
     <div className="w-60 bg-g2 px-4 py-2  hover:bg-g1 relative cursor-pointer">
-      <div className="flex justify-between">
+      <div className="flex justify-between group">
         <div className="flex  m-h-6">
           <img
             className="w-8 rounded-3xl"
             src={imgSrc}
             alt={`${channelName}`}
           />
-          <div className="ml-2 hover-trigger">
+          <div className="ml-2 ">
             <p className="text-sm font-semibold whitespace-nowrap overflow-hidden truncate w-32">
               {channelName}
             </p>
             <p className="text-xs text-g3  whitespace-nowrap overflow-hidden truncate w-36 ">
               {gameTitle}
             </p>
-            <div className="hover-target absolute -right-40 top-0 bg-r  w-36 rounded-lg ">
-              <p className="text-sm  m-h-6 p-2 leading-4 overflow-hidden ">
+            <div className="absolute opacity-0 group-hover:opacity-100 -right-40 top-0 bg-w  w-36 rounded-lg shadow-xl transition-opacity ease-in-out delay-200 duration-300 max-h-12  whitespace-pre-wrap overflow-ellipsis hover:opacity-0">
+              <p className="text-xs p-2 h-fill truncate overflow-hidden ">
                 {streamName}
               </p>
             </div>
