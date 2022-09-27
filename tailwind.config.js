@@ -32,6 +32,9 @@ module.exports = {
       fontSize: {
         xxs: '0.7rem',
       },
+      transitionProperty: {
+        width: 'width',
+      },
     },
   },
   variants: {
