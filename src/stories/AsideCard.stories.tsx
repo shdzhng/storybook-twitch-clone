@@ -1,9 +1,12 @@
-import { AsideCard, AsideCardProps } from '../components/AsideCard';
+import {
+  LivestreamAsideCard,
+  LivestreamAsideCardProps,
+} from '../components/LivestreamAsideCard';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 export default {
   title: 'Aside/Card',
-  component: AsideCard,
+  component: LivestreamAsideCard,
   argTypes: {
     channelName: { defaultValue: 'Default Name' },
     gameTitle: { defaultValue: 'Default Title' },
@@ -20,6 +23,8 @@ export default {
   },
 } as Meta;
 
-const Template: Story<AsideCardProps> = (args) => <AsideCard {...args} />;
+const Template: Story<LivestreamAsideCardProps> = (args) => (
+  <LivestreamAsideCard {...args} />
+);
 
-export const Default = Template.bind({});
+export const DefaultCard = Template.bind({});

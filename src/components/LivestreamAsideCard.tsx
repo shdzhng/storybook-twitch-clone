@@ -1,7 +1,7 @@
 import React from 'react';
-import './AsideCard.styles.css';
+import './LivestreamAsideCard.styles.css';
 
-export interface AsideCardProps {
+export interface LivestreamAsideCardProps {
   channelName: string;
   streamName: string;
   streamURL: string;
@@ -11,7 +11,7 @@ export interface AsideCardProps {
   shrunk: boolean;
 }
 
-export const AsideCard: React.FC<AsideCardProps> = ({
+export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
   channelName,
   gameTitle,
   streamName,
@@ -23,8 +23,6 @@ export const AsideCard: React.FC<AsideCardProps> = ({
   const formatViewCount = (count: number): string => {
     return (count / 1000).toFixed(1) + 'k';
   };
-
-  console.log(shrunk);
 
   return (
     <div
