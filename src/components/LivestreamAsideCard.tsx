@@ -68,7 +68,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
                       </p>
                       <p className="clamp-2 dark:text-w">{streamName}</p>
                       <div className="flex ">
-                        <p className="text-g3 align-top dark:text-g">
+                        <p className="text-g3 align-top dark:text-gray-400">
                           <span className="text-r">live</span>
                           {` | ${formatViewCount(viewerCount)} viewers`}
                         </p>
@@ -76,7 +76,9 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
                     </>
                   ) : (
                     <>
-                      <p className="max-h-12 clamp-2 text-w">{streamName}</p>
+                      <p className="max-h-12 clamp-2 text-b dark:text-w">
+                        {streamName}
+                      </p>
                     </>
                   )}
                 </div>
