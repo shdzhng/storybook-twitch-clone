@@ -117,7 +117,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
             ))}
 
           <button
-            className="hover:underline decoration-solid text-g3 text-sm hover:text-dp"
+            className="hover:underline decoration-solid text-g3 text-sm hover:text-dp focus:outline-none"
             onClick={() => {
               handleToggleLiveRecommendation();
             }}
