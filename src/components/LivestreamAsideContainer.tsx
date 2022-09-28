@@ -44,12 +44,12 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
     <div
       className={`${
         shrunk ? 'w-16  ' : 'w-72 '
-      } bg-g2 px-4 py-4 relative  transition-width ease-in-out duration-300 h-screen flex-col`}
+      } bg-g2 dark:bg-g px-4 py-4 relative  transition-width ease-in-out duration-300 h-screen flex-col`}
     >
       <div
         className={`${
           shrunk ? 'flex-col' : 'flex justify-between'
-        } cursor-pointer  w-full h-14`}
+        } cursor-pointer  w-full h-14 dark:text-w`}
       >
         <p
           className={`${
@@ -60,7 +60,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
         </p>
 
         <svg
-          className={`w-5 my-auto ${shrunk ? 'mx-auto' : null}`}
+          className={`w-5 my-auto fill-current ${shrunk ? 'mx-auto' : null}`}
           viewBox="0 0 20 20"
           onClick={() => `${shrunk ? setShrunk(false) : setShrunk(true)}`}
         >
@@ -74,7 +74,9 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
         </svg>
 
         <svg
-          className={`${shrunk ? 'block mt-4' : 'hidden'} w-5 mx-auto`}
+          className={`${
+            shrunk ? 'block mt-4' : 'hidden'
+          }  fill-current w-5 mx-auto`}
           viewBox="0 0 20 20"
         >
           <g>
@@ -96,13 +98,15 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
           <p
             className={`${
               shrunk ? 'hidden' : 'block'
-            } overflow-hidden text-xs whitespace-nowrap font-bold my-auto`}
+            } overflow-hidden text-xs whitespace-nowrap font-bold my-auto dark:text-w`}
           >
             {`${streamRecommendations[0].streamName.toUpperCase()}'S VIEWERS ALSO WATCH`}
           </p>
 
           <svg
-            className={`${shrunk ? 'block mt-4' : 'hidden'} w-5 mx-auto`}
+            className={`${
+              shrunk ? 'block mt-4' : 'hidden'
+            } dark:text-w fill-current w-5 mx-auto `}
             viewBox="0 0 20 20"
           >
             <g>
@@ -117,15 +121,17 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
             ))}
 
           <button
-            className="hover:underline decoration-solid text-g3 text-sm hover:text-dp focus:outline-none"
+            className={`hover:underline decoration-solid  text-lp text-xs hover:text-dp focus:outline-none ${
+              shrunk ? 'hidden' : ''
+            }`}
             onClick={() => {
               handleToggleLiveRecommendation();
             }}
           >
             {streamRecommendations.length > streamRecommendationsCount
-              ? 'see more'
+              ? 'Show more'
               : streamRecommendations.length < streamRecommendationsCount
-              ? 'see less'
+              ? 'Show less'
               : null}
           </button>
         </div>

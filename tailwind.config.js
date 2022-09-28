@@ -4,13 +4,13 @@ console.log(`   ✅ purgeEnabled=${purgeEnabled}\n`);
 
 module.exports = {
   mode: 'jit',
+  darkMode: 'class',
   content: [
     './src/**/*.html',
     './src/**/*.tsx',
     './src/**/*.jsx',
     './public/**/*.html',
   ],
-  darkMode: false,
   purge: {
     enabled: purgeEnabled,
   },
@@ -21,10 +21,11 @@ module.exports = {
       lp: '#9146FF',
       dp: '#772CE8',
       g0: '#E5E5E5',
-      g1: '#EFEFF1',
+      g1: '#ACACB8',
       g2: '#F7F7F8',
       g3: '#53535f',
       w: '#FFFFFF',
+      g: '#1F1F24',
       b: '#000000',
       r: '#eb0400',
     },

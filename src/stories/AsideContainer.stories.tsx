@@ -8,6 +8,7 @@ const defaultData = {
   channelName: 'Channel Name',
   gameTitle: 'Game Title',
   shrunk: false,
+
   viewerCount: 2958,
   streamName: 'Stream Title',
   streamURL: 'https://shdzhng.dev',
@@ -19,21 +20,32 @@ export default {
   title: 'Molecules/LivestreamAside',
   component: LivestreamAsideContainer,
   argTypes: {
-    followRecommendations: {
-      defaultValue: [defaultData, defaultData, defaultData],
+    darkMode: {
+      defaultValue: false,
+      control: 'boolean',
     },
   },
 } as Meta;
 
-const Template: Story<LivestreamAsideContainerProps> = ({
+interface LivestreamAsideContainerTemplateProps extends LivestreamAsideContainerProps {
+  darkMode: boolean
+}
+
+const Template: Story<LivestreamAsideContainerTemplateProps> = ({
   followRecommendations,
   streamRecommendations,
-}) => (
-  <LivestreamAsideContainer
-    followRecommendations={followRecommendations}
-    streamRecommendations={streamRecommendations}
-  />
-);
+  darkMode,
+}) => {
+  return (
+    <div className={`${darkMode ? 'dark' : ''}`}>
+      <LivestreamAsideContainer
+        followRecommendations={followRecommendations}
+        streamRecommendations={streamRecommendations}
+      />
+    </div>
+  );
+};
+;
 
 export const DefaultLivestreamAside = Template.bind({});
 DefaultLivestreamAside.args = {

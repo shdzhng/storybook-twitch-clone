@@ -27,7 +27,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
 
   return (
     <div
-      className={`w-full bg-g2 py-2  hover:bg-g1 relative cursor-pointer transition-width ease-in-out duration-300`}
+      className={`w-full bg-g2 dark:bg-g py-2 hover:bg-g1 relative cursor-pointer transition-width ease-in-out duration-300`}
     >
       <a href={streamURL} className="mx-auto" rel="noreferrer" target="_blank">
         <div className="flex justify-between  max-h-8">
@@ -42,14 +42,14 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
               <p
                 className={`text-sm ${
                   shrunk ? 'opacity-0' : 'opacity-100'
-                } font-semibold whitespace-nowrap overflow-hidden truncate w-32 transition-opacity ease-in-out duration-100`}
+                } font-semibold whitespace-nowrap overflow-hidden truncate w-32 transition-opacity ease-in-out duration-100 dark:text-w`}
               >
                 {channelName}
               </p>
               <p
                 className={`text-xs ${
                   shrunk ? 'opacity-0' : 'opacity-100'
-                } text-g3 whitespace-nowrap overflow-hidden truncate w-36 transition-opacity ease-in-out duration-100`}
+                } text-g3 dark:text-g1 whitespace-nowrap overflow-hidden truncate w-36 transition-opacity ease-in-out duration-100`}
               >
                 {gameTitle}
               </p>
@@ -90,7 +90,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
             } transition-opacity ease-in-out duration-100`}
           >
             <span className="bg-r p-1 mt-0.5 mx-0.5 rounded-full w-1 h-1" />
-            <p className="text-xs w-full overflow-hidden truncate whitespace-nowrap">
+            <p className="text-xs w-full overflow-hidden truncate whitespace-nowrap dark:text-g1">
               {formatViewCount(viewerCount)}
             </p>
           </div>
