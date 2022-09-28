@@ -44,12 +44,12 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
     <div
       className={`${
         shrunk ? 'w-16  ' : 'w-72 '
-      } bg-g2 dark:bg-g px-4 py-4 relative  transition-width ease-in-out duration-300 h-screen flex-col`}
+      } bg-g2 dark:bg-g relative pt-4 transition-width ease-in-out duration-300 h-screen flex-col`}
     >
       <div
         className={`${
           shrunk ? 'flex-col' : 'flex justify-between'
-        } cursor-pointer  w-full h-14 dark:text-w`}
+        } cursor-pointer px-4 w-full h-4 dark:text-w`}
       >
         <p
           className={`${
@@ -60,7 +60,9 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
         </p>
 
         <svg
-          className={`w-5 my-auto fill-current ${shrunk ? 'mx-auto' : null}`}
+          className={`w-6 my-auto fill-current hover:bg-gray-200 dark:hover:bg-g3 p-1 rounded ${
+            shrunk ? 'mx-auto' : null
+          }`}
           viewBox="0 0 20 20"
           onClick={() => `${shrunk ? setShrunk(false) : setShrunk(true)}`}
         >
@@ -98,14 +100,14 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
           <p
             className={`${
               shrunk ? 'hidden' : 'block'
-            } overflow-hidden text-xs whitespace-nowrap font-bold my-auto dark:text-w`}
+            } overflow-hidden px-4 text-xs whitespace-nowrap font-bold my-auto dark:text-w`}
           >
             {`${streamRecommendations[0].streamName.toUpperCase()}'S VIEWERS ALSO WATCH`}
           </p>
 
           <svg
             className={`${
-              shrunk ? 'block mt-4' : 'hidden'
+              shrunk ? 'block my-4' : 'hidden'
             } dark:text-w fill-current w-5 mx-auto `}
             viewBox="0 0 20 20"
           >
@@ -121,7 +123,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
             ))}
 
           <button
-            className={`hover:underline decoration-solid  text-lp text-xs hover:text-dp focus:outline-none ${
+            className={`hover:underline decoration-solid  text-lp text-xs px-4 hover:text-dp focus:outline-none ${
               shrunk ? 'hidden' : ''
             }`}
             onClick={() => {
