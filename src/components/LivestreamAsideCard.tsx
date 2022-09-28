@@ -26,9 +26,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
 
   return (
     <div
-      className={`${
-        shrunk ? 'w-16' : 'w-60'
-      } bg-g2 px-4 py-2  hover:bg-g1 relative cursor-pointer transition-width ease-in-out duration-300`}
+      className={`w-full bg-g2 py-2  hover:bg-g1 relative cursor-pointer transition-width ease-in-out duration-300`}
     >
       <a href={streamURL} rel="noreferrer" target="_blank">
         <div className="flex justify-between  max-h-8">
@@ -39,7 +37,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
               alt={`${channelName}`}
             />
 
-            <div className="ml-4  w-full">
+            <div className="ml-3">
               <p
                 className={`text-sm ${
                   shrunk ? 'opacity-0' : 'opacity-100'
@@ -61,7 +59,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
                   shrunk ? 'w-60 -right-64' : 'w-36 -right-40 '
                 }`}
               >
-                <div className={`text-xs leading-3`}>
+                <div className={`text-xs leading-4`}>
                   {shrunk ? (
                     <>
                       <p className="clamp-1 text-lp">
