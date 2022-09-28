@@ -5,11 +5,11 @@ import {
 } from '../components/LivestreamAsideContainer';
 
 const defaultData = {
-  channelName: 'Default Name',
-  gameTitle: 'Default Title',
+  channelName: 'Channel Name',
+  gameTitle: 'Game Title',
   shrunk: false,
   viewerCount: 2958,
-  streamName: 'Default Stream Title',
+  streamName: 'Stream Title',
   streamURL: 'https://shdzhng.dev',
   imgSrc:
     'https://cdn.pixabay.com/photo/2022/08/26/13/15/man-7412527_960_720.png',

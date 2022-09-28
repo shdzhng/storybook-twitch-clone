@@ -23,7 +23,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
             <div
               className={`${
                 shrunk ? 'w-16  flex-col' : 'w-60 flex'
-              } bg-g2 px-4 py-2 relative  transition-width ease-in-out duration-300  `}
+              } bg-g2 px-4 py-4 relative  transition-width ease-in-out duration-300 h-full `}
             >
               <div
                 className={`${
@@ -33,12 +33,13 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
                 <p
                   className={`${
                     shrunk ? 'hidden' : 'block'
-                  } overflow-hidden text-xs whitespace-nowrap  font-bold my-auto`}
+                  } overflow-hidden text-xs whitespace-nowrap font-bold my-auto`}
                 >
                   RECOMMENDED CHANNELS
                 </p>
+
                 <svg
-                  className="w-5 mx-auto"
+                  className="w-5 mx-auto my-auto"
                   viewBox="0 0 20 20"
                   onClick={() =>
                     `${shrunk ? setShrunk(false) : setShrunk(true)}`
@@ -53,7 +54,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
                   </g>
                 </svg>
                 <svg
-                  className={`${shrunk ? 'block' : 'hidden'} w-5 mx-auto`}
+                  className={`${shrunk ? 'block mt-4' : 'hidden'} w-5 mx-auto`}
                   viewBox="0 0 20 20"
                 >
                   <g>

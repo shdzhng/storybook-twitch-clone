@@ -8,10 +8,10 @@ export default {
   title: 'Aside/Card',
   component: LivestreamAsideCard,
   argTypes: {
-    channelName: { defaultValue: 'Default Name' },
-    gameTitle: { defaultValue: 'Default Title' },
+    channelName: { defaultValue: 'Channel Name' },
+    gameTitle: { defaultValue: 'Game Title' },
     viewerCount: { defaultValue: 2958 },
-    streamName: { defaultValue: 'Default Stream Title' },
+    streamName: { defaultValue: 'Stream Title' },
     shrunk: { defaultValue: 'false' },
     steamURL: {
       defaultValue: 'https://shdzhng.dev',

@@ -55,14 +55,32 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
                 {gameTitle}
               </p>
 
-              <div className="absolute opacity-0 group-hover:opacity-100 group-focus:opacity-1 -right-40 top-0 bg-w  w-36 rounded-lg shadow-xl transition-opacity ease-in-out delay-200 p-2 duration-300 hover:opacity-0">
-                <p
-                  className={`text-xs  leading-5  ${
-                    shrunk ? 'max-h-30 clamp-4' : 'max-h-12 clamp-2'
-                  }`}
-                >
-                  {streamName}
-                </p>
+              <div
+                id="aside-popper"
+                className={`absolute opacity-0 group-hover:opacity-100 group-focus:opacity-1 top-0 bg-w  rounded-lg shadow-xl transition-opacity ease-in-out delay-200 p-2 duration-300 hover:opacity-0 ${
+                  shrunk ? 'w-60 -right-64' : 'w-36 -right-40 '
+                }`}
+              >
+                <div className={`text-xs leading-3`}>
+                  {shrunk ? (
+                    <>
+                      <p className="clamp-1 text-lp">
+                        {`${streamName} · ${gameTitle}`}
+                      </p>
+                      <p className="clamp-2">{streamName}</p>
+                      <div className="flex ">
+                        <p className="text-g3 align-top">
+                          <span className="text-r">live</span>
+                          {` | ${formatViewCount(viewerCount)} viewers`}
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <p className="max-h-12 clamp-2">{streamName}</p>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -72,7 +90,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
               shrunk ? 'opacity-0' : 'opacity-100'
             } transition-opacity ease-in-out duration-100`}
           >
-            <span className="bg-r p-1 mt-0.5 mx-0.5 rounded-full w-1 h-1 " />
+            <span className="bg-r p-1 mt-0.5 mx-0.5 rounded-full w-1 h-1" />
             <p className="text-xs w-full overflow-hidden truncate whitespace-nowrap">
               {formatViewCount(viewerCount)}
             </p>
