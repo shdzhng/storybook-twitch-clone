@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": false,
   "author": {
-    "email": "raphael.mansuy@elitizon.com",
     "name": "raphael mansuy",
+    "email": "raphael.mansuy@elitizon.com",
     "url": "https://www.elitizon.com"
   },
   "keywords": [
@@ -38,7 +38,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build:tailwind": "tailwind build src/assets/tailwind.css -o src/tailwind.output.css",
-    "watch:tailwind": "chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/tailwind.output.css -c 'npm run build:tailwind'"
+    "watch:tailwind": "chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/tailwind.output.css -c 'npm run build:tailwind'",
+    "chromatic": "npx chromatic --project-token=7b829160cd17"
   },
   "eslintConfig": {
     "extends": [
@@ -77,5 +78,7 @@
     "postcss-cli": "^8.3.1",
     "storybook": "^6.1.14",
     "tailwindcss": "^2.0.2"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "reactapp-tailwind-storybook@1.0.0"
 }

@@ -16,7 +16,7 @@ const defaultData = {
 };
 
 export default {
-  title: 'Aside/Container',
+  title: 'Molecules/LivestreamAside',
   component: LivestreamAsideContainer,
   argTypes: {
     followRecommendations: {
@@ -35,15 +35,23 @@ const Template: Story<LivestreamAsideContainerProps> = ({
   />
 );
 
-export const DefaultCardContainer = Template.bind({});
-DefaultCardContainer.args = {
+export const DefaultLivestreamAside = Template.bind({});
+DefaultLivestreamAside.args = {
   followRecommendations: [defaultData, defaultData, defaultData, defaultData],
 };
 
-export const StreamViewCardContainer = Template.bind({});
-StreamViewCardContainer.args = {
-  followRecommendations: [defaultData, defaultData, defaultData],
+export const ActiveLivestreamAside = Template.bind({});
+ActiveLivestreamAside.args = {
+  followRecommendations: [
+    defaultData,
+    defaultData,
+    defaultData,
+    defaultData,
+    defaultData,
+    defaultData,
+  ],
   streamRecommendations: [
+    defaultData,
     defaultData,
     defaultData,
     defaultData,

@@ -9,7 +9,6 @@ export interface LivestreamAsideContainerProps {
     gameTitle: string;
     viewerCount: number;
     imgSrc: string;
-    shrunk: boolean;
   }[];
   streamRecommendations?: {
     channelName: string;
@@ -18,22 +17,33 @@ export interface LivestreamAsideContainerProps {
     gameTitle: string;
     viewerCount: number;
     imgSrc: string;
-    shrunk: boolean;
   }[];
 }
+const MAX_FOLLOW_RECOMMENDATION = 10;
+const MAX_LIVE_RECOMMENDATION = 6;
+const DEFAULT_LIVE_RECOMMENDATION = 3;
 
 const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
   followRecommendations,
   streamRecommendations,
 }) => {
   const [shrunk, setShrunk] = useState(false);
+  const [streamRecommendationsCount, setstreamRecommendationsCount] = useState(
+    DEFAULT_LIVE_RECOMMENDATION
+  );
+  const handleToggleLiveRecommendation = () => {
+    const newCount =
+      streamRecommendationsCount === DEFAULT_LIVE_RECOMMENDATION
+        ? MAX_LIVE_RECOMMENDATION
+        : DEFAULT_LIVE_RECOMMENDATION;
 
-  console.log({ followRecommendations, streamRecommendations });
+    setstreamRecommendationsCount(newCount);
+  };
 
   return (
     <div
       className={`${
-        shrunk ? 'w-16  ' : 'w-60 '
+        shrunk ? 'w-16  ' : 'w-72 '
       } bg-g2 px-4 py-4 relative  transition-width ease-in-out duration-300 h-screen flex-col`}
     >
       <div
@@ -50,7 +60,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
         </p>
 
         <svg
-          className="w-5 mx-auto my-auto"
+          className={`w-5 my-auto ${shrunk ? 'mx-auto' : null}`}
           viewBox="0 0 20 20"
           onClick={() => `${shrunk ? setShrunk(false) : setShrunk(true)}`}
         >
@@ -62,6 +72,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
             )}
           </g>
         </svg>
+
         <svg
           className={`${shrunk ? 'block mt-4' : 'hidden'} w-5 mx-auto`}
           viewBox="0 0 20 20"
@@ -73,9 +84,11 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
       </div>
 
       <div className="mt-2">
-        {followRecommendations.map((data, i) => (
-          <LivestreamAsideCard key={i} {...data} shrunk={shrunk} />
-        ))}
+        {followRecommendations
+          .slice(0, MAX_FOLLOW_RECOMMENDATION)
+          .map((data, i) => (
+            <LivestreamAsideCard key={i} {...data} shrunk={shrunk} />
+          ))}
       </div>
 
       {streamRecommendations ? (
@@ -97,9 +110,24 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
             </g>
           </svg>
 
-          {streamRecommendations.map((data, i) => (
-            <LivestreamAsideCard key={i} {...data} shrunk={shrunk} />
-          ))}
+          {streamRecommendations
+            .slice(0, streamRecommendationsCount)
+            .map((data, i) => (
+              <LivestreamAsideCard key={i} {...data} shrunk={shrunk} />
+            ))}
+
+          <button
+            className="hover:underline decoration-solid text-g3 text-sm hover:text-dp"
+            onClick={() => {
+              handleToggleLiveRecommendation();
+            }}
+          >
+            {streamRecommendations.length > streamRecommendationsCount
+              ? 'see more'
+              : streamRecommendations.length < streamRecommendationsCount
+              ? 'see less'
+              : null}
+          </button>
         </div>
       ) : null}
     </div>

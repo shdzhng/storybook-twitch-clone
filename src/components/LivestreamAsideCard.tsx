@@ -28,11 +28,11 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
     <div
       className={`w-full bg-g2 py-2  hover:bg-g1 relative cursor-pointer transition-width ease-in-out duration-300`}
     >
-      <a href={streamURL} rel="noreferrer" target="_blank">
+      <a href={streamURL} className="mx-auto" rel="noreferrer" target="_blank">
         <div className="flex justify-between  max-h-8">
           <div className="flex group max-h-8">
             <img
-              className="w-8 rounded-3xl"
+              className="w-8 rounded-3xl "
               src={imgSrc}
               alt={`${channelName}`}
             />
