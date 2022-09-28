@@ -15,21 +15,22 @@ module.exports = {
     enabled: purgeEnabled,
   },
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      lp: '#9146FF',
-      dp: '#772CE8',
-      g0: '#E5E5E5',
-      g1: '#ACACB8',
-      g2: '#F7F7F8',
-      g3: '#53535f',
-      w: '#FFFFFF',
-      g: '#1F1F24',
-      b: '#000000',
-      r: '#eb0400',
-    },
     extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        lp: '#9146FF',
+        dp: '#772CE8',
+        g0: '#E5E5E5',
+        g1: '#ACACB8',
+        g2: '#F7F7F8',
+        g3: '#53535f',
+        w: '#FFFFFF',
+        g: '#1F1F24',
+        ghover: '#161619',
+        b: '#000000',
+        r: '#eb0400',
+      },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-15deg)' },
