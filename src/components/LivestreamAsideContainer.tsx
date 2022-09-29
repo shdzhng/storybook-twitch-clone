@@ -42,6 +42,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
 
   return (
     <div
+      data-testid="livestream-aside-container"
       className={`${
         shrunk ? 'w-16  ' : 'w-72 '
       } bg-g2 dark:bg-g relative pt-4 transition-width ease-in-out duration-300 h-screen flex-col`}
@@ -123,6 +124,7 @@ const LivestreamAsideContainer: React.FC<LivestreamAsideContainerProps> = ({
             ))}
 
           <button
+            data-testid="livestream-aside-container-show-btn"
             className={`hover:underline decoration-solid  text-lp text-xs px-4 hover:text-dp focus:outline-none ${
               shrunk ? 'hidden' : ''
             }`}

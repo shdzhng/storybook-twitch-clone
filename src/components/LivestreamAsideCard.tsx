@@ -27,6 +27,7 @@ export const LivestreamAsideCard: React.FC<LivestreamAsideCardProps> = ({
 
   return (
     <div
+      data-testid="livestream-aside-card"
       className={`w-full bg-g2 dark:bg-g dark:hover:bg-ghover px-4 py-1 hover:bg-gray-200 relative cursor-pointer transition-width ease-in-out duration-300`}
     >
       <a href={streamURL} className="mx-auto" rel="noreferrer" target="_blank">
