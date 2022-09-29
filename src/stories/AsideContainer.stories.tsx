@@ -8,7 +8,6 @@ const defaultData = {
   channelName: 'Channel Name',
   gameTitle: 'Game Title',
   shrunk: false,
-
   viewerCount: 2958,
   streamName: 'Stream Title',
   streamURL: 'https://shdzhng.dev',
@@ -23,6 +22,12 @@ export default {
     darkMode: {
       defaultValue: false,
       control: 'boolean',
+    },
+    followRecommendations: {
+      control: false,
+    },
+    streamRecommendations: {
+      control: false,
     },
   },
 } as Meta;

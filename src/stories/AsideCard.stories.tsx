@@ -23,8 +23,8 @@ export default {
     gameTitle: { defaultValue: 'Game Title' },
     viewerCount: { defaultValue: 2958 },
     streamName: { defaultValue: 'Stream Title' },
-    steamURL: {
-      defaultValue: 'https://shdzhng.dev',
+    streamURL: {
+      control: false,
     },
     imgSrc: {
       defaultValue:
