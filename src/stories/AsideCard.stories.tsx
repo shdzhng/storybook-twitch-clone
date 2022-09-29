@@ -26,6 +26,10 @@ export default {
     streamURL: {
       control: false,
     },
+    shrunk: {
+      description:
+        'A boolean that determines if the small or large variant of the card should be rendered',
+    },
     imgSrc: {
       defaultValue:
         'https://cdn.pixabay.com/photo/2022/08/26/13/15/man-7412527_960_720.png',

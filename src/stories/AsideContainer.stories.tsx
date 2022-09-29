@@ -21,12 +21,16 @@ export default {
   argTypes: {
     darkMode: {
       defaultValue: false,
+      description:
+        'A boolean that determines if the container should use dark mode',
       control: 'boolean',
     },
     followRecommendations: {
+      defaultValue: [defaultData, defaultData, defaultData, defaultData],
       control: false,
     },
     streamRecommendations: {
+      defaultValue: [defaultData, defaultData, defaultData, defaultData],
       control: false,
     },
   },
