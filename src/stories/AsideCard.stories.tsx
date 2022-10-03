@@ -48,6 +48,7 @@ const Template: Story<LivestreamAsideCardProps> = (args) => {
     </div>
   );
 };
+
 export const CollapsedStreamCard = Template.bind({});
 CollapsedStreamCard.args = {
   ...defaultData,
