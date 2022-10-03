@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export interface SearchAutocompleteProps {
   channelOptions: {
@@ -17,12 +17,17 @@ export interface SearchAutocompleteProps {
 }
 
 const SearchAutocomplete: React.FC<SearchAutocompleteProps> = () => {
+  const [searchValue, setSearchValue] = useState('');
+
   return (
-    <form className="flex items-center w-full h-auto">
+    <form className="flex items-center w-full h-auto gap-0.5">
       <input
-        className="w-10/12 bg-g0 h-8 placeholder-g3 focus:ring-lp"
+        className="w-10/12 bg-g0 h-8 placeholder-g3 text-sm rounded-tl-md rounded-bl-md p-2 outline-none hover:ring-r
+focus:ring-2 focus:ring-lp transition-all duration-200"
         autoComplete="true"
         aria-label="Search Input"
+        onChange={(e) => setSearchValue(e.target.value)}
+        value={searchValue}
         type="search"
         placeholder="Search"
         autoCapitalize="off"
@@ -31,8 +36,16 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = () => {
         spellCheck="false"
       />
 
-      <div className="flex justify-center w-2/12">
-        <button aria-label="Search Button" type="submit">
+      <div
+        className={`flex justify-center w-1/12 rounded-tr-md rounded-br-md bg-g2 h-8 hover:bg-g0 `}
+      >
+        <button
+          aria-label="Search Button"
+          className={`${
+            searchValue === '' && 'cursor-not-allowed'
+          } outline-none`}
+          type="submit"
+        >
           <svg
             className="w-5"
             version="1.1"

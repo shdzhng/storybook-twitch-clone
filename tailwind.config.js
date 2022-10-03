@@ -216,6 +216,7 @@ module.exports = {
   variants: {
     extend: {
       display: ['group-hover', 'group-focus'],
+      '--tw-ring-color': ['hover'],
     },
   },
   plugins: [],

@@ -44,7 +44,7 @@ export default {
 
 const Template: Story<SearchAutocompleteProps> = (args) => {
   return (
-    <div className="w-1/3 bg-red-500">
+    <div className="w-1/3 m-2">
       <SearchAutocomplete {...args} />
     </div>
   );
